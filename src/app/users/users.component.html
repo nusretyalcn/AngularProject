@@ -1,0 +1,24 @@
+<h3 class="bg-primary text white p-2">User Table</h3>
+      <table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of users">
+      <td>{{p.userId}}</td>
+      <td>{{p.userName}}</td>
+      <td>{{p.address}}</td>
+      <td>{{p.number}}</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteUser(p)" >Delete</button>
+      </td>
+    </tr>
+  </tbody>
+      </table>
+
